@@ -7,7 +7,7 @@ describe('auth-router.js', () => {
 		it('returns 201 CREATED', () => {
 			return request(server)
 				.post('/api/auth/register')
-				.send({ username: 'tenny', password: 'tague' })
+				.send({ username: 'minny', password: 'tague' })
 				.then(res => {
 					expect(res.status).toBe(201);
 				});
@@ -16,7 +16,7 @@ describe('auth-router.js', () => {
 		it('returns JSON', done => {
 			request(server)
 				.post('/api/auth/register')
-				.send({ username: 'tenny', password: 'tague' })
+				.send({ username: 'minny', password: 'tague' })
 				.then(res => {
 					expect(res.type).toMatch(/json/i);
 					done();
